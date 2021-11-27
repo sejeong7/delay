@@ -39,24 +39,23 @@ var rectangle = svgContainer.append("rect")
 
 d3.select("#start4").on("click", function() {
   rectangle 
-  .transition()
-.attr("fill", "red") // New Color (Hex, RGB, or Web Safe) 
-.attr("opacity", 0.5) // New Opacity
-.attr("width", 100) // New Width
-.attr("height", 100) // New Height
-.attr("x", 250)
-.delay(100); // New Position
+  	.transition()
+	.attr("fill", "red") // New Color (Hex, RGB, or Web Safe) 
+	.attr("opacity", 0.5) // New Opacity
+	.attr("width", 100) // New Width
+	.attr("height", 100) // New Height
+	.attr("x", 250)
+	.delay(100); // New Position
 });
 
 d3.select("#reset4").on("click", function() { 
-rectangle
-});
-.transition()
-.attr("fill", "black") // New Color (Hex, RGB, or Web Safe) 
-.attr("opacity", 1) // New Opacity
-.attr("width", 50) // New Width
-.attr("height", 50) // New Height
-.attr("x", 50); // New Position
+	rectangle
+	.transition()
+	.attr("fill", "black") // New Color (Hex, RGB, or Web Safe) 
+	.attr("opacity", 1) // New Opacity
+	.attr("width", 50) // New Width
+	.attr("height", 50) // New Height
+	.attr("x", 50); // New Position
 });
 
 </script>
