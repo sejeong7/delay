@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>D3 Transitions</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+
+ 	</style>
+</head>
+
+<body>
+	<button id="start3">Transition</button> 
+	<button id="reset3">Reset</button>
+	<div id="main">
+
+	</div>
+<script type="text/javascript">
+
+// Width and height of the SVG object 
+let w = 350;
+let h = 175;
+
+//Make an SVG Container
+var svgContainer = d3.select("div#main")
+	.append("svg")
+	.attr("width", 400) 
+	.attr("height", 200) 
+	.style("border-color", "black") 
+	.style("border-style", "solid")
+	.style("border-width", "1px");
+
+// Draw the Rectangle
+var rectangle = svgContainer.append("rect")
+	.attr("x", 50) 
+	.attr("y", 50) 
+	.attr("width", 50) 
+	.attr("height", 50);
+
+d3.select("#start4").on("click", function() {
+  rectangle 
+  .transition()
+.attr("fill", "red") // New Color (Hex, RGB, or Web Safe) 
+.attr("opacity", 0.5) // New Opacity
+.attr("width", 100) // New Width
+.attr("height", 100) // New Height
+.attr("x", 250)
+.delay(100); // New Position
+});
+
+d3.select("#reset4").on("click", function() { 
+rectangle
+});
+.transition()
+.attr("fill", "black") // New Color (Hex, RGB, or Web Safe) 
+.attr("opacity", 1) // New Opacity
+.attr("width", 50) // New Width
+.attr("height", 50) // New Height
+.attr("x", 50); // New Position
+});
+
+</script>
+</body>
+</html>
